@@ -1,14 +1,172 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Vite + React + TS</title>
-	</head>
+<!DOCTYPE html>
 
-	<body>
-		<div id="root"></div>
-		<script type="module" src="/src/react-app/main.tsx"></script>
-	</body>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>WindWhisper AI - Turbine Monitoring Project</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+
+
+  
+
+  <script>
+
+    window.process = { env: { NODE_ENV: 'production' } };
+
+  </script>
+
+
+
+  
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+
+
+  
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+
+
+  <script>
+
+    tailwind.config = {
+
+      theme: {
+
+        extend: {
+
+          fontFamily: {
+
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+
+            mono: ['JetBrains Mono', 'Menlo', 'monospace'],
+
+          },
+
+          colors: {
+
+            industrial: {
+
+              500: '#64748b',
+
+              600: '#475569',
+
+              700: '#334155',
+
+              800: '#1e293b',
+
+              900: '#0f172a',
+
+            },
+
+            brand: {
+
+              neon: '#10b981',
+
+              accent: '#3b82f6',
+
+              warning: '#f59e0b',
+
+              danger: '#ef4444',
+
+            }
+
+          },
+
+          animation: {
+
+            'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+
+          }
+
+        }
+
+      }
+
+    }
+
+  </script>
+
+  <style>
+    
+
+    body {
+
+      background-color: #0f172a;
+
+      color: #f8fafc;
+
+    }
+
+    
+
+    .leaflet-popup-content-wrapper,
+    .leaflet-popup-tip {
+
+      background: #1e293b;
+
+      color: #fff;
+
+      border: 1px solid #334155;
+
+    }
+
+    .leaflet-container {
+
+      background: #0f172a;
+
+    }
+  </style>
+
+  <script type="importmap">
+
+{
+
+  "imports": {
+
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
+
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.31.0",
+
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.10.0",
+
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/"
+
+  }
+
+}
+
+</script>
+
+  <link rel="stylesheet" href="/index.css">
+
+</head>
+
+<body>
+
+  <div id="root"></div>
+
+  <script type="module" src="./index.tsx"></script>
+
+  <script type="module" src="/index.tsx"></script>
+
+</body>
+
 </html>
